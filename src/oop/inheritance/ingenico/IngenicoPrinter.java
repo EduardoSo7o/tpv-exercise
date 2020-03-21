@@ -1,6 +1,16 @@
 package oop.inheritance.ingenico;
 
 public class IngenicoPrinter {
+    private static IngenicoPrinter instance;
+
+    private IngenicoPrinter(){}
+
+    public static IngenicoPrinter getInstance(){
+        if(instance == null){
+            instance = new IngenicoPrinter();
+        }
+        return instance;
+    }
 
     /**
      * Prints a message on the current line at the specified horizontal position
@@ -8,6 +18,7 @@ public class IngenicoPrinter {
      * @param x       horizontal offset
      * @param message Message to be printed
      */
+
     public void print(int x, String message) {
 
     }
