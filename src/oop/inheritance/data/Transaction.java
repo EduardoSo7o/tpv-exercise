@@ -7,6 +7,12 @@ public class Transaction {
     private Card card;
     private LocalDateTime localDateTime;
 
+    public Transaction(int amountInCents, Card card, LocalDateTime localDateTime){
+        this.amountInCents = amountInCents;
+        this.card = card;
+        this.localDateTime = localDateTime;
+    }
+
     public int getAmountInCents() {
         return amountInCents;
     }
