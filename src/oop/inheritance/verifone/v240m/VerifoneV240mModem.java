@@ -1,10 +1,10 @@
 package oop.inheritance.verifone.v240m;
 
+import oop.inheritance.data.CommunicationStrategy;
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.ModemFactory;
 
-public class VerifoneV240mModem implements ModemFactory{
+public class VerifoneV240mModem implements CommunicationStrategy {
     private static VerifoneV240mModem instance;
 
     private VerifoneV240mModem(){}

@@ -2,9 +2,9 @@ package oop.inheritance.ingenico;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.GPSFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class IngenicoGPS implements GPSFactory{
+public class IngenicoGPS implements CommunicationStrategy{
     private static IngenicoGPS instance;
 
     private IngenicoGPS(){}

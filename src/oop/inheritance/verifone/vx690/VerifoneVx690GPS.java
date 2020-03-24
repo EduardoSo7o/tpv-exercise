@@ -2,9 +2,9 @@ package oop.inheritance.verifone.vx690;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.GPSFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class VerifoneVx690GPS implements GPSFactory{
+public class VerifoneVx690GPS implements CommunicationStrategy{
     private static VerifoneVx690GPS instance;
 
     private VerifoneVx690GPS(){}

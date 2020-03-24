@@ -2,9 +2,9 @@ package oop.inheritance.verifone.vx520;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.ModemFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class VerifoneVx520Modem implements ModemFactory{
+public class VerifoneVx520Modem implements CommunicationStrategy{
     private static VerifoneVx520Modem instance;
 
     private VerifoneVx520Modem(){}

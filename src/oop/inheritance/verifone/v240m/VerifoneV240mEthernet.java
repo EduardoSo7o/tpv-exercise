@@ -2,9 +2,9 @@ package oop.inheritance.verifone.v240m;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.EthernetFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class VerifoneV240mEthernet implements EthernetFactory{
+public class VerifoneV240mEthernet implements CommunicationStrategy{
     private static VerifoneV240mEthernet instance;
 
     private VerifoneV240mEthernet() {

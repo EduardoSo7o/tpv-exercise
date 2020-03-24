@@ -2,10 +2,10 @@ package oop.inheritance.verifone.vx520;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.EthernetFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
 
-public class VerifoneVx520Ethernet implements EthernetFactory{
+public class VerifoneVx520Ethernet implements CommunicationStrategy{
     private static VerifoneVx520Ethernet instance;
 
     private VerifoneVx520Ethernet() {

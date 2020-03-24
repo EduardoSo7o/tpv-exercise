@@ -2,9 +2,9 @@ package oop.inheritance.ingenico;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.ModemFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class IngenicoModem implements ModemFactory{
+public class IngenicoModem implements CommunicationStrategy{
     private static IngenicoModem instance;
 
     private IngenicoModem(){}

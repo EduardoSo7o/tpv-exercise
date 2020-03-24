@@ -19,9 +19,9 @@ public class Application {
     private ChipReaderFactory chipReader;
     private DisplayFactory display;
     private KeyboardFactory keyboard;
-    private EthernetFactory ethernet;
-    private GPSFactory gps;
-    private ModemFactory modem;
+    private CommunicationStrategy ethernet;
+    private CommunicationStrategy gps;
+    private CommunicationStrategy modem;
     private PrinterFactory printer;
 
     public Application(SupportedTerminal supportedTerminal) {
@@ -137,26 +137,25 @@ public class Application {
     private TransactionResponse sendSale(Transaction transaction) {
         TransactionResponse transactionResponse = null;
 
+        ComminucationContext comminucationContext;
+
         switch (communicationType) {
             case ETHERNET:
-                ethernet.open();
-                ethernet.send(transaction);
-                transactionResponse = ethernet.receive();
-                ethernet.close();
-                break;
+                comminucationContext = new ComminucationContext(ethernet);
             case GPS:
-                gps.open();
-                gps.send(transaction);
-                transactionResponse = gps.receive();
-                gps.close();
+                comminucationContext = new ComminucationContext(gps);
                 break;
             case MODEM:
-                modem.open();
-                modem.send(transaction);
-                transactionResponse = modem.receive();
-                modem.close();
+                comminucationContext = new ComminucationContext(modem);
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + communicationType);
         }
+
+        comminucationContext.open();
+        comminucationContext.send(transaction);
+        transactionResponse = comminucationContext.receive();
+        comminucationContext.close();
 
         return transactionResponse;
     }

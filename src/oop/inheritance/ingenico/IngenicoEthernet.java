@@ -2,9 +2,9 @@ package oop.inheritance.ingenico;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
-import oop.inheritance.data.Factory.EthernetFactory;
+import oop.inheritance.data.CommunicationStrategy;
 
-public class IngenicoEthernet implements EthernetFactory{
+public class IngenicoEthernet implements CommunicationStrategy{
     private static IngenicoEthernet instance;
 
     private IngenicoEthernet() {
