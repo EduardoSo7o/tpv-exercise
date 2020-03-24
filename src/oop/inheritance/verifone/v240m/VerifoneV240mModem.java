@@ -1,6 +1,16 @@
 package oop.inheritance.verifone.v240m;
 
 public class VerifoneV240mModem {
+    private static VerifoneV240mModem instance;
+
+    private VerifoneV240mModem(){}
+
+    public static VerifoneV240mModem getInstance() {
+        if (instance == null) {
+            instance = new VerifoneV240mModem();
+        }
+        return instance;
+    }
 
     /**
      * Opens a connection using the modem device

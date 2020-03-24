@@ -1,9 +1,12 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoDisplay {
+import oop.inheritance.data.DisplayFactory;
+
+public class IngenicoDisplay implements DisplayFactory {
     private static IngenicoDisplay instance;
 
-    private IngenicoDisplay(){}
+    private IngenicoDisplay() {
+    }
 
     public static IngenicoDisplay getInstance() {
         if (instance == null) {
@@ -21,12 +24,16 @@ public class IngenicoDisplay {
      * @param message message to be printed
      */
 
+    @Override
     public void showMessage(int x, int y, String message) {
+
     }
 
     /**
      * Clears the screen
      */
+
+    @Override
     public void clear() {
 
     }

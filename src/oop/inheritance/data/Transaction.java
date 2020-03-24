@@ -7,6 +7,8 @@ public class Transaction {
     private Card card;
     private LocalDateTime localDateTime;
 
+    public Transaction(){}
+
     public Transaction(int amountInCents, Card card, LocalDateTime localDateTime){
         this.amountInCents = amountInCents;
         this.card = card;
