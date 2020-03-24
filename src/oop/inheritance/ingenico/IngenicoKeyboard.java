@@ -1,6 +1,8 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoKeyboard {
+import oop.inheritance.data.Factory.KeyboardFactory;
+
+public class IngenicoKeyboard implements KeyboardFactory{
     private static IngenicoKeyboard instance;
 
     private IngenicoKeyboard(){}

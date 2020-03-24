@@ -3,8 +3,9 @@ package oop.inheritance.ingenico;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
+import oop.inheritance.data.Factory.ChipReaderFactory;
 
-public class IngenicoChipReader {
+public class IngenicoChipReader implements ChipReaderFactory{
     private static IngenicoChipReader instance;
 
     private IngenicoChipReader(){}

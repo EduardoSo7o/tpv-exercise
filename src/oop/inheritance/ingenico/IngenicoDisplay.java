@@ -1,6 +1,6 @@
 package oop.inheritance.ingenico;
 
-import oop.inheritance.data.DisplayFactory;
+import oop.inheritance.data.Factory.DisplayFactory;
 
 public class IngenicoDisplay implements DisplayFactory {
     private static IngenicoDisplay instance;

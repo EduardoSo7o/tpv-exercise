@@ -3,8 +3,9 @@ package oop.inheritance.verifone.vx520;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
+import oop.inheritance.data.Factory.CardSwipperFactory;
 
-public class VerifoneVx520CardSwipper {
+public class VerifoneVx520CardSwipper implements CardSwipperFactory{
 
     private static VerifoneVx520CardSwipper instance;
 

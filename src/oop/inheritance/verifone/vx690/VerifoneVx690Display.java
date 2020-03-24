@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690Display {
+import oop.inheritance.data.Factory.DisplayFactory;
+
+public class VerifoneVx690Display implements DisplayFactory{
     private static VerifoneVx690Display instance;
 
     private VerifoneVx690Display() {

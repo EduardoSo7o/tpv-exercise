@@ -1,6 +1,8 @@
 package oop.inheritance.ingenico;
 
-public class IngenicoPrinter {
+import oop.inheritance.data.Factory.PrinterFactory;
+
+public class IngenicoPrinter implements PrinterFactory{
     private static IngenicoPrinter instance;
 
     private IngenicoPrinter(){}

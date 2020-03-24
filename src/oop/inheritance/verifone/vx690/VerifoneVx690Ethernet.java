@@ -1,6 +1,10 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690Ethernet {
+import oop.inheritance.data.Factory.EthernetFactory;
+import oop.inheritance.data.Transaction;
+import oop.inheritance.data.TransactionResponse;
+
+public class VerifoneVx690Ethernet implements EthernetFactory{
     private static VerifoneVx690Ethernet instance;
 
     private VerifoneVx690Ethernet() {
@@ -29,7 +33,7 @@ public class VerifoneVx690Ethernet {
      * @param message message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(byte[] message) {
+    public boolean send(Transaction transaction) {
         return true;
     }
 
@@ -38,9 +42,7 @@ public class VerifoneVx690Ethernet {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public byte[] receive() {
-        return "response".getBytes();
-    }
+    public TransactionResponse receive() { return new TransactionResponse(true, "12314"); }
 
     /**
      * Closes the channel releasing every used resources

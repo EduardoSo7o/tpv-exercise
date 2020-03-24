@@ -3,8 +3,9 @@ package oop.inheritance.ingenico;
 import oop.inheritance.data.Card;
 import oop.inheritance.data.EntryMode;
 import oop.inheritance.data.ExpirationDate;
+import oop.inheritance.data.Factory.CardSwipperFactory;
 
-public class IngenicoCardSwipper {
+public class IngenicoCardSwipper implements CardSwipperFactory{
     private static IngenicoCardSwipper instance;
 
     private IngenicoCardSwipper(){}

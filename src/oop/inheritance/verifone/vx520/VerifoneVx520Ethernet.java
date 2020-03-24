@@ -1,6 +1,11 @@
 package oop.inheritance.verifone.vx520;
 
-public class VerifoneVx520Ethernet {
+import oop.inheritance.data.Transaction;
+import oop.inheritance.data.TransactionResponse;
+import oop.inheritance.data.Factory.EthernetFactory;
+
+
+public class VerifoneVx520Ethernet implements EthernetFactory{
     private static VerifoneVx520Ethernet instance;
 
     private VerifoneVx520Ethernet() {
@@ -29,7 +34,7 @@ public class VerifoneVx520Ethernet {
      * @param message message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(byte[] message) {
+    public boolean send(Transaction transaction) {
         return true;
     }
 
@@ -38,9 +43,8 @@ public class VerifoneVx520Ethernet {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public byte[] receive() {
-        return "response".getBytes();
-    }
+    public TransactionResponse receive() { return new TransactionResponse(true, "12314"); }
+
 
     /**
      * Closes the channel releasing every used resources

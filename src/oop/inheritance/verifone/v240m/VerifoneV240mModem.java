@@ -1,6 +1,10 @@
 package oop.inheritance.verifone.v240m;
 
-public class VerifoneV240mModem {
+import oop.inheritance.data.Transaction;
+import oop.inheritance.data.TransactionResponse;
+import oop.inheritance.data.Factory.ModemFactory;
+
+public class VerifoneV240mModem implements ModemFactory{
     private static VerifoneV240mModem instance;
 
     private VerifoneV240mModem(){}
@@ -28,7 +32,7 @@ public class VerifoneV240mModem {
      * @param message message to be sent to the server
      * @return true if the message was sent successfully, false otherwise
      */
-    public boolean send(byte[] message) {
+    public boolean send(Transaction message) {
         return true;
     }
 
@@ -37,8 +41,8 @@ public class VerifoneV240mModem {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public byte[] receive() {
-        return "response".getBytes();
+    public TransactionResponse receive() {
+        return new TransactionResponse(true, "132123");
     }
 
     /**

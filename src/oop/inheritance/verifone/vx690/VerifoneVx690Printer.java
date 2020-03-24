@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690Printer {
+import oop.inheritance.data.Factory.PrinterFactory;
+
+public class VerifoneVx690Printer implements PrinterFactory{
     private static VerifoneVx690Printer instance;
 
     private VerifoneVx690Printer(){}

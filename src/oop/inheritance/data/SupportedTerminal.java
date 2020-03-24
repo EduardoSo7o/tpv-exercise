@@ -2,5 +2,7 @@ package oop.inheritance.data;
 
 public enum SupportedTerminal {
     INGENICO,
-    VERIFONE
+    VERIFONEv240m,
+    VERIFONEvx520,
+    VERIFONEvx690
 }

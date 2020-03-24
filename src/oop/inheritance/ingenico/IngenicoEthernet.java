@@ -2,8 +2,9 @@ package oop.inheritance.ingenico;
 
 import oop.inheritance.data.Transaction;
 import oop.inheritance.data.TransactionResponse;
+import oop.inheritance.data.Factory.EthernetFactory;
 
-public class IngenicoEthernet {
+public class IngenicoEthernet implements EthernetFactory{
     private static IngenicoEthernet instance;
 
     private IngenicoEthernet() {
@@ -42,9 +43,7 @@ public class IngenicoEthernet {
      *
      * @return Message received from the host. In case of timeout it returns null
      */
-    public TransactionResponse receive() {
-        return new TransactionResponse(true, "12314");
-    }
+    public TransactionResponse receive() { return new TransactionResponse(true, "12314"); }
 
     /**
      * Closes the channel releasing every used resources

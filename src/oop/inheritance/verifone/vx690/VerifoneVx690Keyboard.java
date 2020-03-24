@@ -1,6 +1,8 @@
 package oop.inheritance.verifone.vx690;
 
-public class VerifoneVx690Keyboard {
+import oop.inheritance.data.Factory.KeyboardFactory;
+
+public class VerifoneVx690Keyboard implements KeyboardFactory{
     private static VerifoneVx690Keyboard instance;
 
     private VerifoneVx690Keyboard(){}
